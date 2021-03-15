@@ -1,0 +1,94 @@
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Fredoka One', cursive;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100vh;
+        }
+        
+        .card {
+            width: 70px;
+            height: 70px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform .5s;
+            margin: 5px;
+        }
+        
+        .card-front,
+        .card-back {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        
+        .card-front {
+            transform: rotateY(180deg);
+            background-color: rgb(224, 224, 24);
+        }
+        
+        .card-back {
+            background-color: rgb(26, 218, 198);
+        }
+        
+        .flip {
+            transform: rotateY(180deg);
+        }
+        
+        #gameOver {
+            display: none;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 50px;
+            color: blanchedalmond;
+            font-weight: 900;
+        }
+        
+        button {
+            margin-top: 20px;
+            font-size: 20px;
+            padding: 20px;
+            color: blanchedalmond;
+            font-weight: 900;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(26, 218, 198);
+        }
+        
+        #gameboard {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 700px;
+            display: grid;
+            grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+        }
+        
+        #imgPikachu {
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            transform: translateY(-50%);
+        }
+        
+        #tittle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 50px;
+            color: rgb(26, 218, 198);
+        }
